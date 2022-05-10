@@ -42,8 +42,9 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
   const randomIpfsNftContract = await deploy("RandomIpfsNFT", {
       from:deployer,
       log: true,
-      args: args
+      args: args,
+      gasPrice: ethers.utils.parseUnits('50', 'gwei'),
   })
 
-  console.log(randomIpfsNftContract);
+  console.log(randomIpfsNftContract.address);
 };

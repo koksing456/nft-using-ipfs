@@ -12,6 +12,7 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
       from: deployer,
       log: true,
       args: [BASE_FEE, GAS_PRICE_LINK],
+      gasPrice: ethers.utils.parseUnits('50', 'gwei'),
     });
   } else {
     //use real one
