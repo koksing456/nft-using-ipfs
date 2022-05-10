@@ -13,6 +13,8 @@ module.exports = {
     },
     rinkeby: {
       chainId: 4,
+      url: process.env.RINKEBY_PRC_URL,
+      
     },
   },
   namedAccounts: {
